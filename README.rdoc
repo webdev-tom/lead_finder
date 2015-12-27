@@ -1,0 +1,11 @@
+LeadFinder is a simple solution for filtering through a CSV file and pulling the desired leads.
+
+ToDo:
+
+[] Complete ER Diagram + User Stories
+
+[]
+
+[]
+
+[]
