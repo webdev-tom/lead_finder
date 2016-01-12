@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature "sign up", %Q{
+feature "sign up", %{
 
   As a prospective user
   I want to create an account
