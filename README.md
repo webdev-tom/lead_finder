@@ -11,7 +11,7 @@ TODO:
 
 [x] Complete ER Diagram + User Stories
 
-[]
+[x] Add Badges
 
 []
 
