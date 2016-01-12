@@ -9,7 +9,7 @@ LeadFinder is a simple solution for filtering through a CSV file and pulling the
 
 TODO:
 
-[] Complete ER Diagram + User Stories
+[x] Complete ER Diagram + User Stories
 
 []
 
