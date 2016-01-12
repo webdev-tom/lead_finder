@@ -6,14 +6,14 @@ feature "sign up", %{
   I want to create an account
   So that I can search, as well as save and view my search history
 
-    [ ] Ability to access an account creation page
-    [ ] If user does not fill out the required fields, they are
+    [x] Ability to access an account creation page
+    [x] If user does not fill out the required fields, they are
         presented with errors
 
 } do
 
   scenario "user specifies required info and user account is created" do
-    user = FactoryGirl.create(:user)
+    user = FactoryGirl.build(:user)
 
     visit root_path
     click_link 'Sign Up'
@@ -28,14 +28,29 @@ feature "sign up", %{
     Your account was created successfully."
                                 )
     expect(page).to have_content("Sign Out")
-
   end
 
   scenario "user does not specify required info" do
 
+    visit root_path
+    click_link 'Sign Up'
+    click_button 'Sign Up'
+
+    expect(page).to have_content("can't be blank")
   end
 
   scenario "user password and confirmation do not match" do
+    user1 = FactoryGirl.build(:user)
 
+    visit root_path
+    click_link 'Sign Up'
+    fill_in 'First Name', with: user1.first_name
+    fill_in 'Last Name', with: user1.last_name
+    fill_in 'Email', with: user1.email
+    fill_in 'Password', with: "password", match: :prefer_exact
+    fill_in 'Confirm Password', with: "passwrd"
+    click_button 'Sign Up'
+
+    expect(page).to have_content("doesn't match Password")
   end
 end

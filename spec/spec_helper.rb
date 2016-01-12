@@ -2,6 +2,7 @@ require 'coveralls'
 Coveralls.wear!('rails')
 require 'capybara/rspec'
 require 'database_cleaner'
+require 'valid_attribute'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
