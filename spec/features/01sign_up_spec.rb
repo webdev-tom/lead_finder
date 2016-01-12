@@ -26,7 +26,7 @@ feature "sign up", %{
 
     expect(page).to have_content("Welcome!
     Your account was created successfully."
-    )
+                                )
     expect(page).to have_content("Sign Out")
 
   end

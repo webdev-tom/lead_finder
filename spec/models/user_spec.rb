@@ -10,11 +10,12 @@ RSpec.describe User, type: :model do
   it { should have_valid(:email).when('user@example.com', 'bill@gmail.com') }
   it do
     should_not have_valid(:email).when(nil,
-                                      '',
-                                      'user',
-                                      'user@com',
-                                      'userscom',
-                                      'user.com')
+                                       '',
+                                       'user',
+                                       'user@com',
+                                       'userscom',
+                                       'user.com'
+                                      )
   end
 
   it 'has a matching password confirmation for password' do
