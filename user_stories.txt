@@ -60,6 +60,6 @@ USER AUTH
 
 5.) As an authenticated user
     I want to delete my account
-    So that my information is no longer retained by the app\\
+    So that my information is no longer retained by the app
 
       [ ] Ability to click a ‘delete account’ button that removes the user’s account from the database
