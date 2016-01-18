@@ -1,7 +1,48 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'csv'
+
+
+User.create(
+  first_name: "Test",
+  last_name: "User",
+  email: "user@gmail.com",
+  password: "password",
+  )
+
+
+#Seeding DB with CSV of Leads
+datafile = Rails.root.to_s + "/tmp/leads.csv".encode('UTF-8')
+file = CSV.open(datafile, "r:UTF-8")
+
+CSV.foreach(file.path, headers: true) do |row|
+
+  Lead.find_or_create_by(
+    company_id: row[0],
+    company_name: row[1],
+    phys_address: row[2],
+    phys_city: row[3],
+    phys_state: row[4],
+    phys_zip: row[5],
+    phys_county: row[6],
+    mail_address: row[7],
+    mail_city: row[8],
+    mail_state: row[9],
+    mail_zip: row[10],
+    phone: row[11],
+    alt_phone: row[12],
+    toll_free_phone: row[13],
+    fax_phone: row[14],
+    website: row[15],
+    email: row[16],
+    employees_on_site: row[17],
+    annual_sales: row[18],
+    sqr_footage: row[19],
+    year_est: row[20],
+    area_of_dist: row[21],
+    ownership: row[22],
+    imports: row[23],
+    woman_owned: row[24],
+    minority_owned: row[25],
+    description: row[26]
+  )
+
+end

@@ -1,1 +1,65 @@
 https://docs.google.com/document/d/1PGT_lRSDCkDA5gfTk72PrjphveN-5vB0c18r_BNPOUs/edit?usp=sharing
+
+SEARCH LEADS
+************
+
+1.) As an authenticated user,
+    I want to search via a number of filters,
+    So that I can receive the specific leads I need.
+
+      [ ] Ability to search via city, state, zip, county, and ownership
+      [ ] If I do not specify any search terms, I am presented with errors
+      [ ] If I specify the required information, my search is recorded and
+          I am presented with the requested leads
+
+
+2.) As an authenticated user,
+    I want to view a list of filtered leads,
+    So that I can sell my product.
+
+    	[ ] Can see a list of filtered leads
+      [ ] Clicking on a lead will bring the user to it’s corresponding show page for more information
+
+
+
+USER AUTH
+*********
+
+1.) As a prospective user
+    I want to create an account
+    So that I can search, as well as save and view my search history
+
+      [ ] Ability to access an account creation page
+      [ ] If user does not fill out the required fields, they are presented with errors
+
+
+2.) As an unauthenticated user
+    I want to sign in
+    So that I can search, as well as save and view my search history
+
+      [ ] Ability to access an account sign-in page
+      [ ] If user does not fill out the required fields, or if the credentials are invalid,
+          they are presented with errors
+
+
+3.) As an authenticated user
+    I want to sign out
+    So that no one else can view my search history
+
+      [ ] Ability to see a sign-out button once successfully signed in
+      [ ] Clicking this button signs out the user
+
+
+4.) As an authenticated user
+    I want to update my information
+    So that I can keep my profile up to date
+
+      [ ] Ability to access account edit page while successfully signed in
+      [ ] If user tries to clear required fields and save, they are presented with errors
+
+
+5.) As an authenticated user
+    I want to delete my account
+    So that my information is no longer retained by the app\\
+
+      [ ] Ability to click a ‘delete account’ button that removes the user’s account from the database
