@@ -7,17 +7,18 @@ feature 'user edits/deletes info', %{
       So that I can keep my profile up to date
 
         [x] Ability to access account edit page while successfully signed in
-        [x] If user tries to clear required fields and save, they are presented with errors
+        [x] If user tries to clear required fields and save,
+            they are presented with errors
 
 
       As an authenticated user
       I want to delete my account
       So that my information is no longer retained by the app
 
-        [x] Ability to click a ‘delete account’ button that removes the user’s account from the database
+        [x] Ability to click a ‘delete account’ button that removes the user’s
+            account from the database
 
 } do
-
 
   scenario 'user edits user info successfully' do
     visit root_path

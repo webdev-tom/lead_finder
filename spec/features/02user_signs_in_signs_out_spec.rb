@@ -7,8 +7,8 @@ feature 'sign in and sign out', %{
       So that I can search, as well as save and view my search history
 
         [x] Ability to access an account sign-in page
-        [x] If user does not fill out the required fields, or if the credentials are invalid,
-            they are presented with errors
+        [x] If user does not fill out the required fields, or if the
+            credentials are invalid, they are presented with errors
 
 
       As an authenticated user
