@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20160118163120) do
     t.string  "phys_city",         null: false
     t.string  "phys_state",        null: false
     t.string  "phys_zip",          null: false
-    t.string  "phys_county",       null: false
-    t.string  "mail_address",      null: false
+    t.string  "phys_county"
+    t.string  "mail_address"
     t.string  "mail_city"
     t.string  "mail_state"
     t.string  "mail_zip"

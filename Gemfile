@@ -20,7 +20,6 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'valid_attribute'
-  gem 'shoulda-matchers', require: false
   gem 'byebug'
 
   gem 'quiet_assets'
@@ -29,6 +28,7 @@ end
 group :test do
   gem 'coveralls', require: false
   gem 'database_cleaner'
+  gem 'shoulda-matchers', '~> 3.0'
   gem 'factory_girl'
   gem 'factory_girl_rails'
 end
