@@ -4,11 +4,11 @@ class LeadsController < ApplicationController
 
     if params[:q1].nil? == false
       if params[:q1] == "" &&
-         params[:q2] == "" &&
-         params[:q3] == "" &&
-         params[:q4] == "" &&
-         params[:q5] == ""
-         
+          params[:q2] == "" &&
+          params[:q3] == "" &&
+          params[:q4] == "" &&
+          params[:q5] == ""
+
         flash[:error] = "At least one field must be filled!"
         render :index
       else
