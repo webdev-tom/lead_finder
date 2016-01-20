@@ -3,7 +3,6 @@ class LeadsController < ApplicationController
     @leads = []
 
     if params[:q1].nil? == false
-
       if params[:q1] == "" &&
          params[:q2] == "" &&
          params[:q3] == "" &&
