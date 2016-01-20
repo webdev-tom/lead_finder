@@ -35,14 +35,13 @@ CSV.foreach(file.path, headers: true) do |row|
     email: row[16],
     employees_on_site: row[17],
     annual_sales: row[18],
-    sqr_footage: row[19],
-    year_est: row[20],
-    area_of_dist: row[21],
-    ownership: row[22],
-    imports: row[23],
-    woman_owned: row[24],
-    minority_owned: row[25],
-    description: row[26]
+    year_est: row[19],
+    area_of_dist: row[20],
+    ownership: row[21],
+    imports: row[22],
+    woman_owned: row[23],
+    minority_owned: row[24],
+    description: row[25]
   )
 
 end

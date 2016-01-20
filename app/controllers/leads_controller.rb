@@ -22,7 +22,20 @@ class LeadsController < ApplicationController
   end
 
   def show
+    @lead = Lead.find(params[:id])
   end
+
+  def new
+  end
+
+  def create
+  end
+
+  protected
+
+  # def lead_search_params
+  #   params.permit(:q1, :q2, :q3, :q4, :q5)
+  # end
 
   def search(q1, q2, q3, q4, q5)
     vars = []

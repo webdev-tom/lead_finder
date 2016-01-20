@@ -24,7 +24,7 @@
 <div class="results-list">
   <ul>
     <%@leads.each do |lead|%>
-      <li><%= lead.company_name %></li>
+      <li><a href="/leads/<%= lead.id %>"><%= lead.company_name %></a></li>
     <%end%>
   </ul>
 </div>
