@@ -26,7 +26,7 @@ class LeadsController < ApplicationController
 
     if q1 != ""
       query += "LOWER(company_name) LIKE LOWER(?)"
-      vars << '%'+q1+'%'
+      vars << '%' + q1 + '%'
     end
 
     if q2 != ""
@@ -35,7 +35,7 @@ class LeadsController < ApplicationController
       else
         query += " AND LOWER(phys_address) LIKE LOWER(?)"
       end
-      vars << '%'+q2+'%'
+      vars << '%' + q2 + '%'
     end
 
     if q3 != ""
@@ -44,7 +44,7 @@ class LeadsController < ApplicationController
       else
         query += " AND LOWER(phys_city) LIKE LOWER(?)"
       end
-      vars << '%'+q3+'%'
+      vars << '%' + q3 + '%'
     end
 
     if q4 != ""
@@ -53,7 +53,7 @@ class LeadsController < ApplicationController
       else
         query += " AND LOWER(phys_state) LIKE LOWER(?)"
       end
-      vars << '%'+q4+'%'
+      vars << '%' + q4 + '%'
     end
 
     if q5 != ""
@@ -62,7 +62,7 @@ class LeadsController < ApplicationController
       else
         query += " AND LOWER(phys_zip) LIKE LOWER(?)"
       end
-      vars << '%'+q5+'%'
+      vars << '%' + q5 + '%'
     end
     results = Lead.where(query, *vars)
   end
