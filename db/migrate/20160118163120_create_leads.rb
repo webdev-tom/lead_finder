@@ -20,7 +20,6 @@ class CreateLeads < ActiveRecord::Migration
       t.string :email
       t.integer :employees_on_site, null: false
       t.string :annual_sales
-      t.integer :sqr_footage
       t.integer :year_est
       t.string :area_of_dist
       t.string :ownership

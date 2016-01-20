@@ -1,4 +1,4 @@
-require "spec_helper"
+require 'rails_helper'
 
 feature "search leads", %{
 
@@ -13,15 +13,16 @@ feature "search leads", %{
 
 } do
 
+  let!(:lead) { FactoryGirl.create(:lead) }
   scenario "user enters required information and sees leads" do
 
     visit root_path
-    fill_in "Company name", with: "Rand-Whitney"
-    fill_in "City", with: "Worcester"
-    fill_in "State", with: "MA"
+    fill_in "Company name", with: lead.company_name
+    fill_in "City", with: lead.phys_city
+    fill_in "State", with: lead.phys_state
     click_button "Search"
 
-    # expect(page).to have_content("Rand-Whitney")
+    expect(page).to have_content("3M")
   end
 
   scenario "user does not enter required information and sees errors" do

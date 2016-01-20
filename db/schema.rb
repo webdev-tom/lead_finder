@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 20160118163120) do
     t.string  "email"
     t.integer "employees_on_site", null: false
     t.string  "annual_sales"
-    t.integer "sqr_footage"
     t.integer "year_est"
     t.string  "area_of_dist"
     t.string  "ownership"
