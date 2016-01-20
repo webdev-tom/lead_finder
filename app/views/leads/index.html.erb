@@ -1,1 +1,30 @@
-<h1>This is the index page for the leads</h1>
+</br>
+  <div class="search-form">
+  <%= form_tag leads_path, method: :get do %>
+  <%= label_tag :q1, "Company name" %>
+  <%= text_field_tag :q1 %>
+  </br>
+  <%= label_tag :q2, "Address" %>
+  <%= text_field_tag :q2 %>
+  </br>
+  <%= label_tag :q3, "City" %>
+  <%= text_field_tag :q3 %>
+  </br>
+  <%= label_tag :q4, "State" %>
+  <%= text_field_tag :q4 %>
+  </br>
+  <%= label_tag :q5, "Zip code" %>
+  <%= text_field_tag :q5 %>
+  <%= submit_tag "Search" %>
+  <% end %>
+</div>
+
+</br>
+
+<div class="results-list">
+  <ul>
+    <%@leads.each do |lead|%>
+      <li><%= lead.company_name %></li>
+    <%end%>
+  </ul>
+</div>
