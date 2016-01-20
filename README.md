@@ -14,10 +14,12 @@ TODO:
 
 [x] Seed database
 
-[] implement search functionality
+[x] implement search functionality
 
-[]
+[ ] add detailed show pages for each lead
+
+[ ]
 
 ..
 
-[] clean up CSS
+[ ] clean up CSS
