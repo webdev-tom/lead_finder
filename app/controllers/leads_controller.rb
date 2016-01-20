@@ -13,10 +13,10 @@ class LeadsController < ApplicationController
         render :index
       else
         @leads = search(params[:q1],
-                  params[:q2],
-                  params[:q3],
-                  params[:q4],
-                  params[:q5])
+                        params[:q2],
+                        params[:q3],
+                        params[:q4],
+                        params[:q5])
       end
     end
   end
