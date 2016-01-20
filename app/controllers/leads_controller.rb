@@ -1,8 +1,7 @@
 class LeadsController < ApplicationController
-
   def index
     @leads = []
-    
+
     if params[:q1].nil? == false
 
       if params[:q1] == "" && params[:q2] == "" && params[:q3] == "" && params[:q4] == "" && params[:q5] == ""
@@ -10,11 +9,10 @@ class LeadsController < ApplicationController
         render :index
       else
         @leads = search(params[:q1],
-                        params[:q2],
-                        params[:q3],
-                        params[:q4],
-                        params[:q5]
-                       )
+                  params[:q2],
+                  params[:q3],
+                  params[:q4],
+                  params[:q5])
       end
     end
   end
@@ -23,7 +21,6 @@ class LeadsController < ApplicationController
   end
 
   def search(q1, q2, q3, q4, q5)
-    results = nil
     vars = []
     query = ""
 
@@ -67,6 +64,6 @@ class LeadsController < ApplicationController
       end
       vars << '%' + q5 + '%'
     end
-    results = Lead.where(query, *vars)
+    Lead.where(query, *vars)
   end
 end
