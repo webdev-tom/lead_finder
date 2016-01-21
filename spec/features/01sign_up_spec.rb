@@ -23,7 +23,7 @@ feature "sign up", %{
     fill_in 'Password', with: user.password, match: :prefer_exact
     fill_in 'Confirm Password', with: user.password
     click_button 'Sign Up'
-    save_and_open_page
+
     expect(page).to have_content("Welcome!
     Your account was created successfully."
                                 )
