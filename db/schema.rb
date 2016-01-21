@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(version: 20160118163120) do
     t.boolean "woman_owned"
     t.boolean "minority_owned"
     t.text    "description"
+    t.integer "status"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|

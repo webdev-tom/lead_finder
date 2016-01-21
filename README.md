@@ -8,18 +8,29 @@ LeadFinder is a simple solution for finding, displaying, and working with sales 
 
 TODO:
 
-[x] Complete ER Diagram + User Stories
+  BACK END:
 
-[x] Add Badges
+    [x] Complete ER Diagram + User Stories
 
-[x] Seed database
+    [x] Add Badges
 
-[x] implement search functionality
+    [x] Seed database
 
-[ ] add detailed show pages for each lead
+    [x] implement search functionality
 
-[ ]
+    [x] add detailed show pages for each lead
 
-..
+    [ ] add functionality to toggle leads as your own
 
-[ ] clean up CSS
+    [ ] add ability to create a new lead
+
+    [ ] add ability to mark lead as obsolete
+
+
+  CSS:
+
+    [x] implement foundation
+
+    [x] clean up CSS
+
+    [ ] finalize CSS    
