@@ -25,11 +25,11 @@
       <ul class="right">
         <li class="has-dropdown">
           <% if user_signed_in? %>
-            <li class="green-background"><strong><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></strong></li>
-            <li class="green-background"><strong><%= link_to 'Edit Info', edit_user_registration_path%></strong></li>
+            <li class="background-nav"><strong><%= link_to 'Sign Out', destroy_user_session_path, class: :button, method: :delete %></strong></li>
+            <li class="background-nav"><strong><%= link_to 'Edit Info', edit_user_registration_path, class: :button %></strong></li>
           <% else %>
-            <li class="green-background"><strong><%= link_to 'Sign In', new_user_session_path %></strong></li>
-            <li class="green-background"><strong><%= link_to 'Sign Up', new_user_registration_path %></strong></li>
+            <li class="background-nav"><strong><%= link_to 'Sign In', new_user_session_path, class: :button %></strong></li>
+            <li class="background-nav"><strong><%= link_to 'Sign Up', new_user_registration_path, class: :button %></strong></li>
           <% end %>
         </li>
       </ul>
@@ -37,12 +37,13 @@
     </nav>
 
     <div class="row">
+      <div class="small-4 small-centered columns" id="error-msg">
       <% flash.each do |key, value| %>
-        <div data-alert class="flash <%= key %>">
-          <%= value %>
-          <a href="#" class="close">&times;</a>
+        <div data-alert class="flash">
+          <%= value + " ✖︎"%>
         </div>
       <% end %>
+      </div>
     </div>
 
     <%= yield %>

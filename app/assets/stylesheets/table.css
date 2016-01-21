@@ -24,8 +24,11 @@
 
 .tg .tg-yw4l{
   vertical-align:top;
+  text-align: center;
 }
 
-.tables {
-  padding-left: 5rem
+.table {
+  margin-right: auto;
+  margin-left: auto;
+  display: inline;
 }

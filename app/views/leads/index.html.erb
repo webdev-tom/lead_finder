@@ -1,30 +1,42 @@
 </br>
-  <div class="search-form">
-  <%= form_tag leads_path, method: :get do %>
-  <%= label_tag :q1, "Company name" %>
-  <%= text_field_tag :q1 %>
-  </br>
-  <%= label_tag :q2, "Address" %>
-  <%= text_field_tag :q2 %>
-  </br>
-  <%= label_tag :q3, "City" %>
-  <%= text_field_tag :q3 %>
-  </br>
-  <%= label_tag :q4, "State" %>
-  <%= text_field_tag :q4 %>
-  </br>
-  <%= label_tag :q5, "Zip code" %>
-  <%= text_field_tag :q5 %>
-  <%= submit_tag "Search" %>
-  <% end %>
+
+
+<div class="row">
+  <div class="small-5 small-centered columns">
+
+    <%= form_tag leads_path, method: :get do %>
+    <%= label_tag :q1, "Company name" %>
+    <%= text_field_tag :q1 %>
+    </br>
+    <%= label_tag :q2, "Address" %>
+    <%= text_field_tag :q2 %>
+    </br>
+    <%= label_tag :q3, "City" %>
+    <%= text_field_tag :q3 %>
+    </br>
+    <%= label_tag :q4, "State" %>
+    <%= text_field_tag :q4 %>
+    </br>
+    <%= label_tag :q5, "Zip code" %>
+    <%= text_field_tag :q5 %>
+    <div class="small-3 small-centered columns">
+      <%= submit_tag "Search" %>
+      <% end %>
+    </div>
+  </div>
 </div>
+
 
 </br>
 
-<div class="results-list">
-  <ul>
-    <%@leads.each do |lead|%>
-      <li><a href="/leads/<%= lead.id %>"><%= lead.company_name %></a></li>
-    <%end%>
-  </ul>
+<div class="row">
+  <div class="small-6 small-centered columns">
+    <div class="list">
+      <ul id="hover-list">
+        <%@leads.each do |lead|%>
+          <li id="hover-list-item"><a href="/leads/<%= lead.id %>"><%= lead.company_name %></a></li>
+        <%end%>
+      </ul>
+    </div>
+  </div>
 </div>

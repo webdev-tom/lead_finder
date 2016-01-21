@@ -1,0 +1,39 @@
+.list {
+  width: 300px; width: 30rem;
+  padding-right: 15px;
+}
+
+#hover-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#hover-list-item {
+  font: 20px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+#hover-list-item:last-child {
+  border: none;
+}
+
+#hover-list-item a {
+  text-decoration: none;
+  color: #000;
+  display: grid;
+  width: 200px;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+#hover-list-item a:hover {
+  font-size: 21px;
+  background: #F2F3F4;
+}
