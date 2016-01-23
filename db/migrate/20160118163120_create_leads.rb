@@ -27,8 +27,8 @@ class CreateLeads < ActiveRecord::Migration
       t.boolean :woman_owned
       t.boolean :minority_owned
       t.text :description
-      t.integer :status
-      t.integer :user_id
+      t.boolean :status, default: true
+      t.integer :user_id, default: 0
     end
   end
 end
