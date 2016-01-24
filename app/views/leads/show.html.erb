@@ -3,241 +3,241 @@
 </br>
 
 <div class="row">
-  <div class="small-5 small-centered columns">
 
-    <div class="table">
-      <h2>Basic Info</h2>
+  <div class="small-4 columns">
+    <h2>Basic Info</h2>
 
-      <table class="tg">
-        <tr>
-          <th class="tg-yw4l">Company ID</th>
-          <% if @lead.company_id.nil?%>
-            <td class="tg-yw4l"><i>N/A</i></td>
-          <%else%>
-            <td class="tg-yw4l"><%=@lead.company_id%></td>
-          <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">Company Name</td>
-          <% if @lead.company_name.nil?%>
-            <td class="tg-yw4l"><i>N/A</i></td>
-          <%else%>
-            <td class="tg-yw4l"><%=@lead.company_name%></td>
-          <%end%>
-        </tr>
-        <tr>
-          <th class="tg-yw4l">Year Established</th>
-          <% if @lead.year_est.nil?%>
-            <td class="tg-yw4l"><i>not found</i></td>
-          <%else%>
-            <td class="tg-yw4l"><%=@lead.year_est%></td>
-          <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">Address</td>
-          <% if @lead.phys_address.nil?%>
-            <td class="tg-yw4l"><i>no physical address available</i></td>
-          <%else%>
-            <td class="tg-yw4l"><%=@lead.phys_address%></td>
-          <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">City</td>
-          <% if @lead.phys_city.nil?%>
-            <td class="tg-yw4l"><i>no physical city available</i></td>
-          <%else%>
-            <td class="tg-yw4l"><%=@lead.phys_city%></td>
-          <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">State</td>
-          <% if @lead.phys_state.nil?%>
-            <td class="tg-yw4l"><i>no physical state available</i></td>
-          <%else%>
-            <td class="tg-yw4l"><%=@lead.phys_state%></td>
-          <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">Zip Code</td>
-          <% if @lead.phys_zip.nil?%>
-            <td class="tg-yw4l"><i>no physical zip available</i></td>
-          <%else%>
-            <td class="tg-yw4l"><%=@lead.phys_zip%></td>
-          <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">Ownership</td>
-          <% if @lead.ownership.nil?%>
-            <td class="tg-yw4l"><i>no ownership status available</i></td>
-          <%else%>
-            <td class="tg-yw4l"><%=@lead.ownership%></td>
-          <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">Description</td>
-          <% if @lead.description.nil?%>
-            <td class="tg-yw4l"><i>no description available</i></td>
-          <%else%>
-            <td class="tg-yw4l"><%=@lead.description%></td>
-          <%end%>
-        </tr>
-      </table>
+    <table class="tg">
+      <tr>
+        <th class="tg-yw4l">Company ID</th>
+        <% if @lead.company_id.nil?%>
+          <td class="tg-yw4l"><i>N/A</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.company_id%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">Company Name</td>
+        <% if @lead.company_name.nil?%>
+          <td class="tg-yw4l"><i>N/A</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.company_name%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <th class="tg-yw4l">Year Established</th>
+        <% if @lead.year_est.nil?%>
+          <td class="tg-yw4l"><i>not found</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.year_est%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">Address</td>
+        <% if @lead.phys_address.nil?%>
+          <td class="tg-yw4l"><i>no physical address available</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.phys_address%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">City</td>
+        <% if @lead.phys_city.nil?%>
+          <td class="tg-yw4l"><i>no physical city available</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.phys_city%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">State</td>
+        <% if @lead.phys_state.nil?%>
+          <td class="tg-yw4l"><i>no physical state available</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.phys_state%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">Zip Code</td>
+        <% if @lead.phys_zip.nil?%>
+          <td class="tg-yw4l"><i>no physical zip available</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.phys_zip%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">Ownership</td>
+        <% if @lead.ownership.nil?%>
+          <td class="tg-yw4l"><i>no ownership status available</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.ownership%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">Description</td>
+        <% if @lead.description.nil?%>
+          <td class="tg-yw4l"><i>no description available</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.description%></td>
+        <%end%>
+      </tr>
+    </table>
+  </div>
 
-      <h2>Contact Info</h2>
+  <div class="small-4 columns">
+    <h2>Contact Info</h2>
 
-      <table class="tg">
-        <tr>
-          <th class="tg-yw4l">Primary Phone</th>
-          <% if @lead.phone.nil?%>
-            <td class="tg-yw4l"><i>no primary phone available</i></td>
-          <%else%>
-            <td class="tg-yw4l"><%=@lead.phone%></td>
-          <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">Alternate Phone</td>
-          <% if @lead.alt_phone.nil?%>
-            <td class="tg-yw4l"><i>no alternate phone available</i></td>
-          <%else%>
-            <td class="tg-yw4l"><%=@lead.alt_phone%></td>
-          <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">Toll-Free Phone</td>
-          <% if @lead.toll_free_phone.nil?%>
-            <td class="tg-yw4l"><i>no toll-free phone available</i></td>
-          <%else%>
-            <td class="tg-yw4l"><%=@lead.toll_free_phone%></td>
-          <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">Fax</td>
-          <% if @lead.fax_phone.nil?%>
-            <td class="tg-yw4l"><i>no fax number available</i></td>
-          <%else%>
-            <td class="tg-yw4l"><%=@lead.fax_phone%></td>
-          <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">Mailing Address</td>
-          <% if @lead.mail_address.nil?%>
-            <td class="tg-yw4l"><i>no mailing address available</i></td>
-          <%else%>
-            <td class="tg-yw4l"><%=@lead.mail_address%></td>
-          <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">Mailing City</td>
-          <% if @lead.mail_city.nil?%>
-            <td class="tg-yw4l"><i>no mailing city available</i></td>
-          <%else%>
-            <td class="tg-yw4l"><%=@lead.mail_city%></td>
-          <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">Mailing State</td>
-          <% if @lead.mail_state.nil?%>
-            <td class="tg-yw4l"><i>no mailing state available</i></td>
-          <%else%>
-            <td class="tg-yw4l"><%=@lead.mail_state%></td>
-          <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">Mailing Zip Code</td>
-          <% if @lead.mail_zip.nil?%>
-            <td class="tg-yw4l"><i>no mailing zip available</i></td>
-          <%else%>
-            <td class="tg-yw4l"><%=@lead.mail_zip%></td>
-          <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">Email</td>
-          <% if @lead.email.nil?%>
-            <td class="tg-yw4l"><i>no email available</i></td>
-          <%else%>
-            <td class="tg-yw4l"><%=@lead.email%></td>
-          <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">Website</td>
-          <% if @lead.website.nil?%>
-            <td class="tg-yw4l"><i>no website available</i></td>
-          <%else%>
-            <td class="tg-yw4l"><%=link_to @lead.website, ("http://" + @lead.website), data: { confirm: "Continue to external website?" }%></td>
-          <%end%>
-        </tr>
-      </table>
+    <table class="tg">
+      <tr>
+        <th class="tg-yw4l">Primary Phone</th>
+        <% if @lead.phone.nil?%>
+          <td class="tg-yw4l"><i>no primary phone available</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.phone%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">Alternate Phone</td>
+        <% if @lead.alt_phone.nil?%>
+          <td class="tg-yw4l"><i>no alternate phone available</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.alt_phone%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">Toll-Free Phone</td>
+        <% if @lead.toll_free_phone.nil?%>
+          <td class="tg-yw4l"><i>no toll-free phone available</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.toll_free_phone%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">Fax</td>
+        <% if @lead.fax_phone.nil?%>
+          <td class="tg-yw4l"><i>no fax number available</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.fax_phone%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">Mailing Address</td>
+        <% if @lead.mail_address.nil?%>
+          <td class="tg-yw4l"><i>no mailing address available</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.mail_address%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">Mailing City</td>
+        <% if @lead.mail_city.nil?%>
+          <td class="tg-yw4l"><i>no mailing city available</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.mail_city%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">Mailing State</td>
+        <% if @lead.mail_state.nil?%>
+          <td class="tg-yw4l"><i>no mailing state available</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.mail_state%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">Mailing Zip Code</td>
+        <% if @lead.mail_zip.nil?%>
+          <td class="tg-yw4l"><i>no mailing zip available</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.mail_zip%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">Email</td>
+        <% if @lead.email.nil?%>
+          <td class="tg-yw4l"><i>no email available</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.email%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">Website</td>
+        <% if @lead.website.nil?%>
+          <td class="tg-yw4l"><i>no website available</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=link_to @lead.website, ("http://" + @lead.website), data: { confirm: "Continue to external website?" }%></td>
+        <%end%>
+      </tr>
+    </table>
+  </div>
 
+  <div class="small-4 columns">
+    <h2>Sales Info</h2>
 
-      <h2>Sales Info</h2>
-
-      <table class="tg">
-        <tr>
-          <td class="tg-yw4l">Employees on Site</td>
-          <% if @lead.employees_on_site.nil?%>
-            <td class="tg-yw4l"><i>employee data not found</i></td>
+    <table class="tg">
+      <tr>
+        <td class="tg-yw4l">Employees on Site</td>
+        <% if @lead.employees_on_site.nil?%>
+          <td class="tg-yw4l"><i>employee data not found</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.employees_on_site%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">Area of Distribution</td>
+        <% if @lead.area_of_dist.nil?%>
+          <td class="tg-yw4l"><i>distribution data not found</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.area_of_dist%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">Annual Sales</td>
+        <% if @lead.annual_sales.nil?%>
+          <td class="tg-yw4l"><i>sales data not found</i></td>
+        <%else%>
+          <td class="tg-yw4l"><%=@lead.annual_sales%></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">Import Goods?</td>
+        <% if @lead.imports.nil?%>
+          <td class="tg-yw4l"><i>n/a</i></td>
+        <%else%>
+          <% if @lead.imports == true%>
+            <td class="tg-yw4l">Y</td>
           <%else%>
-            <td class="tg-yw4l"><%=@lead.employees_on_site%></td>
+            <td class="tg-yw4l">N</td>
           <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">Area of Distribution</td>
-          <% if @lead.area_of_dist.nil?%>
-            <td class="tg-yw4l"><i>distribution data not found</i></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">Woman Owned?</td>
+        <% if @lead.woman_owned.nil?%>
+          <td class="tg-yw4l"><i>n/a</i></td>
+        <%else%>
+          <% if @lead.woman_owned == true%>
+            <td class="tg-yw4l">Y</td>
           <%else%>
-            <td class="tg-yw4l"><%=@lead.area_of_dist%></td>
+            <td class="tg-yw4l">N</td>
           <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">Annual Sales</td>
-          <% if @lead.annual_sales.nil?%>
-            <td class="tg-yw4l"><i>sales data not found</i></td>
+        <%end%>
+      </tr>
+      <tr>
+        <td class="tg-yw4l">Minority Owned?</td>
+        <% if @lead.minority_owned.nil?%>
+          <td class="tg-yw4l"><i>n/a</i></td>
+        <%else%>
+          <% if @lead.minority_owned == true%>
+            <td class="tg-yw4l">Y</td>
           <%else%>
-            <td class="tg-yw4l"><%=@lead.annual_sales%></td>
+            <td class="tg-yw4l">N</td>
           <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">Import Goods?</td>
-          <% if @lead.imports.nil?%>
-            <td class="tg-yw4l"><i>n/a</i></td>
-          <%else%>
-            <% if @lead.imports == true%>
-              <td class="tg-yw4l">Y</td>
-            <%else%>
-              <td class="tg-yw4l">N</td>
-            <%end%>
-          <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">Woman Owned?</td>
-          <% if @lead.woman_owned.nil?%>
-            <td class="tg-yw4l"><i>n/a</i></td>
-          <%else%>
-            <% if @lead.woman_owned == true%>
-              <td class="tg-yw4l">Y</td>
-            <%else%>
-              <td class="tg-yw4l">N</td>
-            <%end%>
-          <%end%>
-        </tr>
-        <tr>
-          <td class="tg-yw4l">Minority Owned?</td>
-          <% if @lead.minority_owned.nil?%>
-            <td class="tg-yw4l"><i>n/a</i></td>
-          <%else%>
-            <% if @lead.minority_owned == true%>
-              <td class="tg-yw4l">Y</td>
-            <%else%>
-              <td class="tg-yw4l">N</td>
-            <%end%>
-          <%end%>
-        </tr>
-      </table>
-    </div>
-
-
+        <%end%>
+      </tr>
+    </table>
   </div>
 </div>
+
 
 </br>
 
