@@ -1,5 +1,4 @@
 module StatesHelper
-
   def us_states
     [
       ['Select', nil],

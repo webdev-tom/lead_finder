@@ -29,7 +29,7 @@ feature "create lead", %{
     fill_in "*City", with: "Boston"
     select "MA", from: "*State"
     fill_in "*Zip Code", with: "02111"
-    
+
     click_on "Create Lead"
 
     expect(page).to have_content("Launch Academy Details:")

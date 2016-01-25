@@ -1,5 +1,4 @@
 module OwnershipHelper
-
   def ownership
     [
       ['Select', nil],
