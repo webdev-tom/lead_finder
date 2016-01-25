@@ -1,7 +1,6 @@
 class Lead < ActiveRecord::Base
   belongs_to :user
 
-
   validates :company_id, uniqueness: true, case_sensitive: false
   validates :company_id, numericality: { only_integer: true }
 
