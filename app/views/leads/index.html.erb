@@ -1,31 +1,86 @@
 </br>
 
+<% if user_signed_in? %>
 
-<div class="row">
-  <div class="small-5 small-centered columns">
+  <div class="row">
+    <div class="small-6 columns">
 
-    <%= form_tag leads_path, method: :get do %>
-    <%= label_tag :q1, "Company name" %>
-    <%= text_field_tag :q1 %>
-    </br>
-    <%= label_tag :q2, "Address" %>
-    <%= text_field_tag :q2 %>
-    </br>
-    <%= label_tag :q3, "City" %>
-    <%= text_field_tag :q3 %>
-    </br>
-    <%= label_tag :q4, "State" %>
-    <%= text_field_tag :q4 %>
-    </br>
-    <%= label_tag :q5, "Zip code" %>
-    <%= text_field_tag :q5 %>
-    <div class="small-3 small-centered columns">
-      <%= submit_tag "Search" %>
-      <% end %>
+      <div id="authed-search-form">
+        <div class="small-7 small-centered columns">
+          <h2>Search Leads</h2>
+        </div>
+
+        <%= form_tag leads_path, method: :get do %>
+        <%= label_tag :q1, "Company name" %>
+        <%= text_field_tag :q1 %>
+        </br>
+        <%= label_tag :q2, "Address" %>
+        <%= text_field_tag :q2 %>
+        </br>
+        <%= label_tag :q3, "City" %>
+        <%= text_field_tag :q3 %>
+        </br>
+        <%= label_tag :q4, "State" %>
+        <%= text_field_tag :q4 %>
+        </br>
+        <%= label_tag :q5, "Zip code" %>
+        <%= text_field_tag :q5 %>
+        <div class="small-3 small-centered columns">
+          <%= submit_tag "Search" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="small-6 columns">
+
+      <div id="create-leads-option">
+        <div class="small-7 small-centered columns">
+          <h2>Create Leads</h2>
+        </div>
+
+        <div id="create-lead-btn">
+          <%= link_to "Create a Lead →", new_lead_path, class: :button %>
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
 
+<% else %>
+
+  <div class="row">
+    <div class="small-5 small-centered columns">
+
+      <div id="authed-search-form">
+        <div class="small-9 small-centered columns" id="search-leads-header">
+          <h2>Search Leads</h2>
+        </div>
+
+        <%= form_tag leads_path, method: :get do %>
+        <%= label_tag :q1, "Company name" %>
+        <%= text_field_tag :q1 %>
+        </br>
+        <%= label_tag :q2, "Address" %>
+        <%= text_field_tag :q2 %>
+        </br>
+        <%= label_tag :q3, "City" %>
+        <%= text_field_tag :q3 %>
+        </br>
+        <%= label_tag :q4, "State" %>
+        <%= text_field_tag :q4 %>
+        </br>
+        <%= label_tag :q5, "Zip code" %>
+        <%= text_field_tag :q5 %>
+        <div class="small-3 small-centered columns">
+          <%= submit_tag "Search" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% end %>
 
 </br>
 

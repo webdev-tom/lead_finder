@@ -1,5 +1,6 @@
 class LeadsController < ApplicationController
   def index
+    @user = current_user
     @leads = []
 
     if params[:q1].nil? == false
@@ -26,9 +27,22 @@ class LeadsController < ApplicationController
   end
 
   def new
+    @lead = Lead.new
   end
 
   def create
+    @user = current_user
+    @lead = Lead.new(lead_params)
+
+    @lead.company_id = create_id
+
+    if @lead.save
+      flash[:notice] = "Your lead has been saved to the database, #{@user.first_name}."
+      redirect_to lead_path(@lead)
+    else
+      flash[:errors] = @lead.errors.full_messages.join(". ")
+      render :new
+    end
   end
 
   protected
@@ -36,6 +50,37 @@ class LeadsController < ApplicationController
   # def lead_search_params
   #   params.permit(:q1, :q2, :q3, :q4, :q5)
   # end
+
+  def lead_params
+    params.require(:lead).permit(:company_name,
+                                 :phys_address,
+                                 :phys_city,
+                                 :phys_state,
+                                 :phys_zip,
+                                 :description,
+                                 :phone,
+                                 :alt_phone,
+                                 :toll_free_phone,
+                                 :fax_phone,
+                                 :website,
+                                 :email,
+                                 :mail_address,
+                                 :mail_city,
+                                 :mail_state,
+                                 :mail_zip,
+                                 :employees_on_site,
+                                 :annual_sales,
+                                 :year_est,
+                                 :area_of_dist,
+                                 :ownership,
+                                 :imports,
+                                 :woman_owned,
+                                 :minority_owned)
+  end
+
+  def create_id
+    Time.now.strftime("%m%M%S")
+  end
 
   def search(q1, q2, q3, q4, q5)
     vars = []

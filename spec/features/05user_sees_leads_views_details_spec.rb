@@ -6,8 +6,8 @@ feature "search leads", %{
   I want to view a list of filtered leads,
   So that I can sell my product.
 
-    [ ] Can see a list of filtered leads
-    [ ] Clicking on a lead will bring the user to it’s
+    [x] Can see a list of filtered leads
+    [x] Clicking on a lead will bring the user to it’s
         corresponding show page for more information
 
 } do
