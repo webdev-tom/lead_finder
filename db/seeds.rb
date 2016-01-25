@@ -10,7 +10,7 @@ User.create(
 
 
 #Seeding DB with CSV of Leads
-datafile = Rails.root.to_s + "/tmp/leads.csv".encode('UTF-8')
+datafile = Rails.root.to_s + "/app/assets/leads.csv".encode('UTF-8')
 file = CSV.open(datafile, "r:UTF-8")
 
 CSV.foreach(file.path, headers: true) do |row|
