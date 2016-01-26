@@ -20,6 +20,26 @@
   padding-left: 30px; padding-left: 3rem;
 }
 
+#new-lead-cancel {
+  padding-top: 10px; padding-top: 1rem;
+}
+
+#authed-search-form {
+  padding-right: 10px; padding-right: 1rem;
+}
+
+#create-leads-option {
+  padding-left: 15px; padding-left: 1.5rem;
+}
+
+#search-leads-header {
+  padding-left: 15px; padding-left: 1.5rem;
+}
+
+#new-lead-header {
+  padding-left: 20px; padding-left: 2rem;
+}
+
 .devise-back {
   padding-left: 230px; padding-left: 23rem;
 }

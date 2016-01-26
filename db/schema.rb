@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20160118163120) do
     t.string  "fax_phone"
     t.string  "website"
     t.string  "email"
-    t.integer "employees_on_site",                null: false
+    t.integer "employees_on_site"
     t.string  "annual_sales"
     t.integer "year_est"
     t.string  "area_of_dist"

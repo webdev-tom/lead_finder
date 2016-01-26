@@ -1,0 +1,140 @@
+<% if user_signed_in? %>
+
+  <div class="row">
+    <div class="small-12 columns">
+      <div id="new-lead-cancel">
+        <%= link_to "← Cancel", leads_path %>
+      </div>
+    </div>
+    <div class="small-4 small-centered columns">
+      <div id="new-lead-header">
+        <h2>Create a Lead</h2>
+      </div>
+    </div>
+  </div>
+
+  </br>
+
+  <div class="row">
+    <div class="small-5 small-centered columns">
+        <div class="small-6 small-centered columns">
+          <h3>General Info:</h3>
+        </div>
+
+        <%= form_for(@lead) do |f|%>
+        <br>
+        <%= f.label :company_name, "*Company Name" %>
+        <%= f.text_field :company_name %>
+        <br>
+        <%= f.label :phys_address, "*Address" %>
+        <%= f.text_field :phys_address %>
+        <br>
+        <%= f.label :phys_city, "*City" %>
+        <%= f.text_field :phys_city %>
+        <br>
+        <%= f.label :phys_state, "*State" %>
+        <%= f.select :phys_state, options_for_select(us_states, "Select") %>
+        <br>
+        <br>
+        <%= f.label :phys_zip, "*Zip Code" %>
+        <%= f.text_field :phys_zip %>
+        <br>
+        <%= f.label :description, "Brief Description of Company" %>
+        <%= f.text_area :description, size: "5x5"%>
+        <br>
+
+        <div class="small-6 small-centered columns">
+          <h3>Contact Info:</h3>
+        </div>
+
+        <br>
+        <%= f.label :phone, "Phone Number" %>
+        <%= f.text_field :phone %>
+        <br>
+        <%= f.label :alt_phone, "Alternate Phone Number" %>
+        <%= f.text_field :alt_phone %>
+        <br>
+        <%= f.label :toll_free_phone, "Toll-Free Phone Number" %>
+        <%= f.text_field :toll_free_phone %>
+        <br>
+        <%= f.label :fax_phone, "Fax Number" %>
+        <%= f.text_field :fax_phone %>
+        <br>
+        <%= f.label :website %>
+        <%= f.text_field :website %>
+        <br>
+        <%= f.label :email, "Contact Email" %>
+        <%= f.text_field :email %>
+        <br>
+
+        <div class="small-6 small-centered columns">
+          <h3>Sales Info:</h3>
+        </div>
+
+        <br>
+        <%= f.label :year_est, "Year Established" %>
+        <%= f.text_field :year_est %>
+        <br>
+        <%= f.label :area_of_dist, "Area of Distribution" %>
+        <%= f.select :area_of_dist, [['Select',nil], ['Local','Local'], ['National','National'], ['International','International']] %>
+        <br>
+        <br>
+        <%= f.label :employees_on_site, "Number of Employees on Site" %>
+        <%= f.text_field :employees_on_site %>
+        <br>
+        <%= f.label :annual_sales, "Annual Sales" %>
+        <%= f.text_field :annual_sales %>
+        <br>
+        <%= f.label :ownership, "Type of Ownership" %>
+        <%= f.select :ownership, options_for_select(ownership, "Select") %>
+        <br>
+        <br>
+        <%= f.label :imports, "Do they Import Goods?" %>
+        <%= f.select :imports, [['Select',nil], ['Yes',true], ['No',false], ['Don\'t Know',nil]] %>
+        <br>
+        <%= f.label :woman_owned, "Woman Owned?" %>
+        <%= f.select :woman_owned, [['Select',nil], ['Yes',true], ['No',false], ['Don\'t Know',nil]] %>
+        <br>
+        <%= f.label :minority_owned, "Minority Owned?" %>
+        <%= f.select :minority_owned, [['Select',nil], ['Yes',true], ['No',false], ['Don\'t Know',nil]] %>
+        <br>
+
+        <div class="small-6 small-centered columns">
+          <h3>Mailing Info:</h3>
+        </div>
+
+        <br>
+        <%= f.label :mail_address, "Mailing Address" %>
+        <%= f.text_field :mail_address %>
+        <br>
+        <%= f.label :mail_city, "Mailing City" %>
+        <%= f.text_field :mail_city %>
+        <br>
+        <%= f.label :mail_state, "Mailing State" %>
+        <%= f.select :mail_state, options_for_select(us_states, "Select") %>
+        <br>
+        <br>
+        <%= f.label :mail_zip, "Mailing Zip Code" %>
+        <%= f.text_field :mail_zip %>
+        <br>
+        <div id="create-lead-btn">
+          <%= f.submit "Create Lead", class: :button %>
+          <% end %>
+        </div>
+    </div>
+  </div>
+
+<% else %>
+
+  <br>
+
+  <div class="row">
+    <div class="small-9 small-centered columns">
+      <h2>You must be signed in to view this content.</h2>
+      <div id="unauthed-return-home-btn">
+        <%= link_to "Return Home", leads_path, class: :button %>
+      </div>
+    </div>
+  </div>
+
+<% end %>

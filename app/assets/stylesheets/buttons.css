@@ -17,3 +17,13 @@
   padding-right: 5px; padding-right: 0.5rem;
 
 }
+
+#create-lead-btn {
+  padding-top: 5px; padding-top: 0.5rem;
+  padding-left: 70px; padding-left: 7rem;
+}
+
+#unauthed-return-home-btn {
+  padding-top: 15px; padding-top: 1.5rem;
+  padding-left: 170px; padding-left: 17rem;
+}
