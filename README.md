@@ -20,9 +20,9 @@ TODO:
 
     [x] add detailed show pages for each lead
 
-    [ ] add functionality to toggle leads as your own
+    [x] add ability to create a new lead
 
-    [ ] add ability to create a new lead
+    [ ] add functionality to toggle leads as your own
 
     [ ] add ability to mark lead as obsolete
 
