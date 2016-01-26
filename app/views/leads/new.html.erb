@@ -16,13 +16,12 @@
   </br>
 
   <div class="row">
-    <div class="small-6 columns">
-      <%= form_for(@lead) do |f|%>
-
-        <div class="small-5 small-centered columns">
+    <div class="small-5 small-centered columns">
+        <div class="small-6 small-centered columns">
           <h3>General Info:</h3>
         </div>
 
+        <%= form_for(@lead) do |f|%>
         <br>
         <%= f.label :company_name, "*Company Name" %>
         <%= f.text_field :company_name %>
@@ -43,11 +42,8 @@
         <%= f.label :description, "Brief Description of Company" %>
         <%= f.text_area :description, size: "5x5"%>
         <br>
-    </div>
 
-    <div class="small-6 columns">
-
-        <div class="small-5 small-centered columns">
+        <div class="small-6 small-centered columns">
           <h3>Contact Info:</h3>
         </div>
 
@@ -70,13 +66,8 @@
         <%= f.label :email, "Contact Email" %>
         <%= f.text_field :email %>
         <br>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="small-6 columns">
-
-        <div class="small-5 small-centered columns">
+        <div class="small-6 small-centered columns">
           <h3>Sales Info:</h3>
         </div>
 
@@ -107,10 +98,8 @@
         <%= f.label :minority_owned, "Minority Owned?" %>
         <%= f.select :minority_owned, [['Select',nil], ['Yes',true], ['No',false], ['Don\'t Know',nil]] %>
         <br>
-    </div>
-    <div class="small-6 columns">
 
-        <div class="small-5 small-centered columns">
+        <div class="small-6 small-centered columns">
           <h3>Mailing Info:</h3>
         </div>
 
