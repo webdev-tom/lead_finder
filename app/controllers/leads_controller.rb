@@ -4,7 +4,7 @@ class LeadsController < ApplicationController
     @leads = []
 
     if params[:q1].nil? == false
-      if is_valid_search?
+      if valid_search?
         @leads = search(*search_params)
       else
         flash[:error] = "At least one field must be filled!"
@@ -67,12 +67,12 @@ class LeadsController < ApplicationController
                                 :minority_owned)
   end
 
-  def is_valid_search?
+  def valid_search?
     if params[:q1] == "" &&
-        params[:q2] == "" &&
-        params[:q3] == "" &&
-        params[:q4] == "" &&
-        params[:q5] == ""
+      params[:q2] == "" &&
+      params[:q3] == "" &&
+      params[:q4] == "" &&
+      params[:q5] == ""
 
         return false
 

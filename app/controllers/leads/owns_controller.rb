@@ -1,5 +1,4 @@
 class Leads::OwnsController < ApplicationController
-
   before_action :load_lead
 
   def update
@@ -12,8 +11,7 @@ class Leads::OwnsController < ApplicationController
 
   protected
 
-    def load_lead
-      @lead = Lead.find(params[:id])
-    end
-
+  def load_lead
+    @lead = Lead.find(params[:id])
+  end
 end
