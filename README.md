@@ -22,6 +22,8 @@ TODO:
 
     [x] add ability to create a new lead
 
+    [ ] integrate google maps api
+
     [ ] add functionality to toggle leads as your own
 
     [ ] add ability to mark lead as obsolete
