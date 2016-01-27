@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 20160118163120) do
     t.text    "description"
     t.boolean "status",            default: true
     t.integer "user_id",           default: 0
+    t.float   "latitude"
+    t.float   "longitude"
   end
 
   create_table "users", force: :cascade do |t|
