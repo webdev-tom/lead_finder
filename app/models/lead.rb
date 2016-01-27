@@ -1,7 +1,6 @@
 class Lead < ActiveRecord::Base
   belongs_to :user
 
-
   geocoded_by :phys_address
   sleep(1)
   after_validation :geocode
