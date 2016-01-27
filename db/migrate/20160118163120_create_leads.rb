@@ -29,6 +29,8 @@ class CreateLeads < ActiveRecord::Migration
       t.text :description
       t.boolean :status, default: true
       t.integer :user_id, default: 0
+      t.float :latitude
+      t.float :longitude
     end
   end
 end
