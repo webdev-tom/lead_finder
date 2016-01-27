@@ -69,12 +69,12 @@ class LeadsController < ApplicationController
 
   def valid_search?
     if params[:q1] == "" &&
-      params[:q2] == "" &&
-      params[:q3] == "" &&
-      params[:q4] == "" &&
-      params[:q5] == ""
+        params[:q2] == "" &&
+        params[:q3] == "" &&
+        params[:q4] == "" &&
+        params[:q5] == ""
 
-        return false
+      return false
 
     else
       return true
