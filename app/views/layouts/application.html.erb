@@ -36,14 +36,13 @@
       </section>
     </nav>
 
-    <div class="row">
-      <div class="small-4 small-centered columns" id="error-msg">
-      <% flash.each do |key, value| %>
-        <div data-alert class="flash">
-          <%= value + " ✖︎"%>
-        </div>
-      <% end %>
+
+    <div class="text-center" id="error-msg">
+    <% flash.each do |key, value| %>
+      <div data-alert class="flash">
+        <%= value + " ✖︎" %>
       </div>
+    <% end %>
     </div>
 
     <%= yield %>

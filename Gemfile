@@ -13,6 +13,7 @@ gem 'foundation-rails'
 
 gem 'simple_form'
 gem 'devise'
+gem 'geokit'
 
 group :development, :test do
   gem 'pry-rails'

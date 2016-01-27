@@ -4,29 +4,22 @@ class LeadsController < ApplicationController
     @leads = []
 
     if params[:q1].nil? == false
-      if params[:q1] == "" &&
-          params[:q2] == "" &&
-          params[:q3] == "" &&
-          params[:q4] == "" &&
-          params[:q5] == ""
-
+      if is_valid_search?
+        @leads = search(*search_params)
+      else
         flash[:error] = "At least one field must be filled!"
         render :index
-      else
-        @leads = search(params[:q1],
-                        params[:q2],
-                        params[:q3],
-                        params[:q4],
-                        params[:q5])
       end
     end
   end
 
   def show
+    @user = current_user
     @lead = Lead.find(params[:id])
   end
 
   def new
+    @user = current_user
     @lead = Lead.new
   end
 
@@ -46,10 +39,6 @@ class LeadsController < ApplicationController
   end
 
   protected
-
-  # def lead_search_params
-  #   params.permit(:q1, :q2, :q3, :q4, :q5)
-  # end
 
   def lead_params
     params.require(:lead).permit(:company_name,
@@ -78,8 +67,26 @@ class LeadsController < ApplicationController
                                 :minority_owned)
   end
 
+  def is_valid_search?
+    if params[:q1] == "" &&
+        params[:q2] == "" &&
+        params[:q3] == "" &&
+        params[:q4] == "" &&
+        params[:q5] == ""
+
+        return false
+
+    else
+      return true
+    end
+  end
+
+  def search_params
+    [params[:q1], params[:q2], params[:q3], params[:q4], params[:q5]]
+  end
+
   def create_id
-    Time.now.strftime("%m%M%S")
+    Time.now.strftime("%H%M%S")
   end
 
   def search(q1, q2, q3, q4, q5)
@@ -126,6 +133,6 @@ class LeadsController < ApplicationController
       end
       vars << '%' + q5 + '%'
     end
-    Lead.where(query, *vars)
+    Lead.where(query, *vars).order(company_name: :asc)
   end
 end
