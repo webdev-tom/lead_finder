@@ -16,4 +16,26 @@ class Lead < ActiveRecord::Base
   validates :phys_zip, presence: true
   validates :phys_zip, numericality: { only_integer: true }
   validates :phys_zip, length: { is: 5 }
+
+  def owned?
+    owned_at != nil
+  end
+
+  def own
+    self.owned_at = Time.now
+  end
+
+  def own!
+    own
+    save!
+  end
+
+  def unown
+    self.owned_at = nil
+  end
+
+  def unown!
+    unown
+    save!
+  end
 end

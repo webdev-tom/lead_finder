@@ -26,6 +26,8 @@ TODO:
 
     [ ] add ability to mark lead as obsolete
 
+    [ ] add validations for creating a lead
+
 
   CSS:
 
