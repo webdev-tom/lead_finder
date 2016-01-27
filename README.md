@@ -10,11 +10,11 @@ TODO:
 
   BACK END:
 
-    [x] Complete ER Diagram + User Stories
+    [x] complete ER Diagram + User Stories
 
-    [x] Add Badges
+    [x] add badges
 
-    [x] Seed database
+    [x] seed database
 
     [x] implement search functionality
 
@@ -37,4 +37,6 @@ TODO:
 
     [x] clean up CSS
 
-    [ ] finalize CSS    
+    [ ] finalize CSS
+
+    [ ] make README pretty 
