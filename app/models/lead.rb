@@ -1,10 +1,6 @@
 class Lead < ActiveRecord::Base
   belongs_to :user
 
-  geocoded_by :phys_address
-  sleep(1)
-  after_validation :geocode
-
   validates :company_id, uniqueness: true, case_sensitive: false
   validates :company_id, numericality: { only_integer: true }
 

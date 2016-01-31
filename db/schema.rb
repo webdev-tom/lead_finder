@@ -17,12 +17,12 @@ ActiveRecord::Schema.define(version: 20160118163120) do
   enable_extension "plpgsql"
 
   create_table "leads", force: :cascade do |t|
-    t.string  "company_id",                       null: false
-    t.string  "company_name",                     null: false
-    t.string  "phys_address",                     null: false
-    t.string  "phys_city",                        null: false
-    t.string  "phys_state",                       null: false
-    t.string  "phys_zip",                         null: false
+    t.string  "company_id",                    null: false
+    t.string  "company_name",                  null: false
+    t.string  "phys_address",                  null: false
+    t.string  "phys_city",                     null: false
+    t.string  "phys_state",                    null: false
+    t.string  "phys_zip",                      null: false
     t.string  "phys_county"
     t.string  "mail_address"
     t.string  "mail_city"
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20160118163120) do
     t.boolean "woman_owned"
     t.boolean "minority_owned"
     t.text    "description"
-    t.boolean "status",            default: true
+    t.integer "status",            default: 0
     t.integer "user_id",           default: 0
     t.float   "latitude"
     t.float   "longitude"

@@ -6,9 +6,72 @@
 
 </br>
 
+
+<div class="row">
+  <div class="medium-12 columns">
+
+  <style type="text/css">
+    html { height: 100% }
+    body { height: 100%; margin: 0; padding: 0 }
+    #map-canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyXlEt4Oi9PP1MVQWY9lVLF14IsA29x3U&sensor=false">
+    </script>
+    <script type="text/javascript">
+      function set_map(state, city){
+        var mapOptions = {
+          center: new google.maps.LatLng(25.687944,-100.309403),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+        mapOptions);
+
+        if(state == ""){
+          address = city;
+        }else{
+          address = state + ',' + city;
+        }
+
+        var geocoder = new google.maps.Geocoder();
+
+        geocoder.geocode({
+          'address':address
+        },
+
+        function(result, status){
+          if (status == google.maps.GeocoderStatus.OK){
+            map.setCenter(result[0].geometry.location);
+
+            var marker = new google.maps.Marker({
+              map: map,
+              position: result[0].geometry.location
+            });
+          }else{
+            alert("Geocode was not successful for the following reason: " + status);
+          }
+        });
+        return false;
+      }
+
+      $(document).ready(function(){
+        set_map('<%= @lead.phys_state %>', '<%= @lead.phys_city %>');
+      })
+    </script>
+
+    <div id="map-canvas" style="width:1000px;height:500px;"/>
+
+  </div>
+</div>
+
 <div class="row">
 
+  <% if user_signed_in?%>
+  <div class="medium-3 columns">
+  <% else %>
   <div class="medium-4 columns">
+  <% end %>
     <h2>Basic Info</h2>
 
     <table class="tg">
@@ -87,7 +150,11 @@
     </table>
   </div>
 
+  <% if user_signed_in?%>
+  <div class="medium-3 columns">
+  <% else %>
   <div class="medium-4 columns">
+  <% end %>
     <h2>Contact Info</h2>
 
     <table class="tg">
@@ -174,7 +241,11 @@
     </table>
   </div>
 
+  <% if user_signed_in?%>
+  <div class="medium-3 columns">
+  <% else %>
   <div class="medium-4 columns">
+  <% end %>
     <h2>Sales Info</h2>
 
     <table class="tg">
@@ -240,10 +311,26 @@
       </tr>
     </table>
   </div>
-</div>
 
-</br>
+  <% if user_signed_in?%>
+    <div class="medium-3 columns">
+      <h2>Claim?</h2>
+      <div class="medium-6 columns">
+        <% if @user.id == @lead.user_id || @lead.user_id == 0 %>
+          <% if @lead.status == 0%>
+            <%= link_to "Claim Lead", {:controller => "leads", action: "claim", id: @lead.id}, method: :post, class: "button" %>
+            <%= link_to "Unclaim Lead", "#", class: "button success" %>
+          <% else %>
+            <%= link_to "Claim Lead", "#", class: "button success" %>
+            <%= link_to "Unclaim Lead", {:controller => "leads", action: "unclaim", id: @lead.id}, method: :post, class: "button" %>
+          <% end %>
+        <% else %>
+          <p class="text-center">
+            This lead has been claimed by another user.
+          </p>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
 
-<div id="back-to-search">
-  <%= link_to "← Return to Search", leads_path %>
 </div>

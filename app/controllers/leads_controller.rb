@@ -38,6 +38,25 @@ class LeadsController < ApplicationController
     end
   end
 
+  def claim
+    @lead = Lead.find(params[:id])
+    @user = current_user
+    lead = Lead.find(params[:id])
+    lead.update_attribute(:status, lead.status = 1)
+    lead.update_attribute(:user_id, lead.user_id = @user.id)
+    redirect_to lead_path(@lead)
+    flash[:notice] = "Lead claimed successfully."
+  end
+
+  def unclaim
+    @lead = Lead.find(params[:id])
+    lead = Lead.find(params[:id])
+    lead.update_attribute(:status, lead.status = 0)
+    lead.update_attribute(:user_id, lead.user_id = 0)
+    redirect_to lead_path(@lead)
+    flash[:notice] = "Lead unclaimed successfully."
+  end
+
   protected
 
   def lead_params
@@ -65,6 +84,19 @@ class LeadsController < ApplicationController
                                 :imports,
                                 :woman_owned,
                                 :minority_owned)
+  end
+
+  def update_params
+    params.require(:lead).permit(:status)
+  end
+
+
+  def claimed?
+    lead = Lead.find(params[:id])
+    if lead.status == 1
+      return true
+    end
+    false
   end
 
   def valid_search?
