@@ -44,6 +44,10 @@
   padding-left: 15px; padding-left: 1.5rem;
 }
 
+#map-canvas {
+  height: 100%;
+}
+
 .devise-back {
   padding-left: 230px; padding-left: 23rem;
 }
