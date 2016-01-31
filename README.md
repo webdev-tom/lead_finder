@@ -7,8 +7,8 @@
 LeadFinder is a simple solution for finding, displaying, and working with sales leads.
 
 
-Leads can be pulled by filling in at least one of the search fields.
-![Alt text](http://i.imgur.com/rUIGqiO.png)
+
+![Leads can be pulled by filling in at least one of the search fields.](http://i.imgur.com/rUIGqiO.png)
 
 Clicking on the desired result will display the lead's detail page, where more information on the respective company can be found, as well as the company's location provided via Google Maps.
 ![Alt text](http://i.imgur.com/5cHvy2W.jpg)
