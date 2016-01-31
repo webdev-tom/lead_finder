@@ -6,7 +6,7 @@
 
 ## Their Information, All in One Place.
 
-          LeadFinder provides a solution for finding, displaying, and working with sales leads.
+  LeadFinder provides a solution for finding, displaying, and working with sales leads.
 
 
 Leads can be pulled by filling in at least one of the search fields.
