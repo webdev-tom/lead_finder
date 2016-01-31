@@ -4,7 +4,7 @@
 ![Code Climate](https://codeclimate.com/github/tomfafard/lead_finder.png)
 ![Coverage Status](https://coveralls.io/repos/tomfafard/lead_finder/badge.png)
 
-#LeadFinder is a simple solution for finding, displaying, and working with sales leads.
+###LeadFinder is a simple solution for finding, displaying, and working with sales leads.
 
 
 
