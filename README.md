@@ -11,7 +11,7 @@ LeadFinder provides a simple solution for finding, displaying, and working with 
 [LeadFinder.herokuapp.com](http://leadfinder.herokuapp.com)
 
 ### Searching Leads
-![](http://i.imgur.com/rUIGqiO.png)
+![a](http://i.imgur.com/rUIGqiO.png)
 
 >Leads can be pulled by filling in at least one of the search fields.
 
