@@ -6,8 +6,8 @@ feature "create lead", %{
   I want to create a new lead,
   So that I can keep the database up to date.
 
-    [ ] Can see a button to create new lead
-    [ ] Can see fields to enter new lead
+    [x] Can see a button to create new lead
+    [x] Can see fields to enter new lead
 
 } do
 

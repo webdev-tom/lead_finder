@@ -6,37 +6,15 @@
 
 LeadFinder is a simple solution for finding, displaying, and working with sales leads.
 
-TODO:
 
-  BACK END:
+Leads can be pulled by filling in at least one of the search fields.
+![Alt text](http://i.imgur.com/rUIGqiO.png)
 
-    [x] complete ER Diagram + User Stories
+Clicking on the desired result will display the lead's detail page, where more information on the respective company can be found, as well as the company's location provided via Google Maps.
+![Alt text](http://i.imgur.com/5cHvy2W.jpg)
 
-    [x] add badges
+Registered users on the site are given the ability to create a lead...
+![Alt text](http://i.imgur.com/r75nRbg.png)
 
-    [x] seed database
-
-    [x] implement search functionality
-
-    [x] add detailed show pages for each lead
-
-    [x] add ability to create a new lead
-
-    [ ] integrate google maps api
-
-    [ ] add functionality to toggle leads as your own
-
-    [ ] add ability to mark lead as obsolete
-
-    [ ] add validations for creating a lead
-
-
-  CSS:
-
-    [x] implement foundation
-
-    [x] clean up CSS
-
-    [ ] finalize CSS
-
-    [ ] make README pretty 
+...as well as the ability to claim a lead as their own, so that other users will know which leads are available to them.
+![Alt text](http://i.imgur.com/zh5UNVq.png)
