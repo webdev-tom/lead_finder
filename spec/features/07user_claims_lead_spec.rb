@@ -6,9 +6,9 @@ feature "claim lead", %{
   I want to claim a lead,
   So that other users will know which leads are avilable to them.
 
-    [ ] Can see a button to claim lead
-    [ ] Can see a button to unclaim lead
-    [ ] Cannot claim lead if already claimed
+    [x] Can see a button to claim lead
+    [x] Can see a button to unclaim lead
+    [x] Cannot claim lead if already claimed
 
 } do
 

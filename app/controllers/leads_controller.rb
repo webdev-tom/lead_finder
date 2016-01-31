@@ -30,7 +30,7 @@ class LeadsController < ApplicationController
     @lead.company_id = create_id
 
     if @lead.save
-      flash[:notice] = "Your lead has been saved to the database, #{@user.first_name}."
+      flash[:notice] = "Your lead has been saved to the database."
       redirect_to lead_path(@lead)
     else
       flash[:errors] = @lead.errors.full_messages.join(". ")
@@ -88,15 +88,6 @@ class LeadsController < ApplicationController
 
   def update_params
     params.require(:lead).permit(:status)
-  end
-
-
-  def claimed?
-    lead = Lead.find(params[:id])
-    if lead.status == 1
-      return true
-    end
-    false
   end
 
   def valid_search?
