@@ -6,7 +6,9 @@
 
 ## Their Information, All in One Place.
 
-LeadFinder provides a solution for finding, displaying, and working with sales leads.
+LeadFinder provides a simple solution for finding, displaying, and working with sales leads.
+
+[LeadFinder.herokuapp.com]: http://leadfinder.herokuapp.com
 
 ### Searching Leads
 ![](http://i.imgur.com/rUIGqiO.png)
