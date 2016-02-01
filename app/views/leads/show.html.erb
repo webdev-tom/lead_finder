@@ -274,15 +274,15 @@
 
   <% if user_signed_in?%>
     <div class="medium-3 columns">
-      <h2>Claim?</h2>
+      <h2 id="claim-header">Claim?</h2>
       <div class="medium-6 columns">
         <% if @user.id == @lead.user_id || @lead.user_id == 0 %>
           <% if @lead.status == 0%>
-            <%= link_to "Claim Lead", {:controller => "leads", action: "claim", id: @lead.id}, method: :post, class: "button" %>
-            <%= link_to "Unclaim Lead", "#", class: "button success" %>
+            <%= link_to "Claim Lead", {:controller => "leads", action: "claim", id: @lead.id}, method: :post, class: "button", style: "width:125px;" %>
+            <%= link_to "Unclaim Lead", "#", class: "button success", style: "width:125px;" %>
           <% else %>
-            <%= link_to "Claim Lead", "#", class: "button success" %>
-            <%= link_to "Unclaim Lead", {:controller => "leads", action: "unclaim", id: @lead.id}, method: :post, class: "button" %>
+            <%= link_to "Claim Lead", "#", class: "button success", style: "width:125px;"%>
+            <%= link_to "Unclaim Lead", {:controller => "leads", action: "unclaim", id: @lead.id}, method: :post, class: "button", style: "width:125px;" %>
           <% end %>
         <% else %>
           <p class="text-center">

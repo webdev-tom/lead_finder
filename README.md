@@ -16,7 +16,7 @@ LeadFinder provides a simple solution for finding, displaying, and working with 
 >Leads can be pulled by filling in at least one of the search fields.
 
 ### Viewing Details
-![](http://i.imgur.com/5cHvy2W.jpg)
+![](http://i.imgur.com/chBtU7a.jpg)
 
 >Clicking on the desired result will display the lead's detail page, where more information on the respective company can be found, as well as the company's location provided via Google Maps.
 
@@ -26,6 +26,6 @@ LeadFinder provides a simple solution for finding, displaying, and working with 
 >Registered users on the site are given the ability to create a lead...
 
 ### Claiming Leads
-![](http://i.imgur.com/zh5UNVq.png)
+![](http://i.imgur.com/8MEQOcb.png)
 
 >...as well as the ability to claim a lead as their own, so that other users will know which leads are available to them.
