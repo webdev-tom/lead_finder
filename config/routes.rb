@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  root "leads#index"
+
+  root "landing#home"
 
   resources :leads do
     member do

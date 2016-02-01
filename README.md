@@ -28,4 +28,4 @@ LeadFinder provides a simple solution for finding, displaying, and working with 
 ### Claiming Leads
 ![](http://i.imgur.com/8MEQOcb.png)
 
->...as well as the ability to claim a lead as their own, so that other users will know which leads are available to them.
+>...as well as the ability to claim a lead as their own, so that other users will know which leads are available to execute on.

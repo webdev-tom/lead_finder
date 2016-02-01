@@ -1,8 +1,12 @@
-  <div class="row">
-    <div class="medium-3 columns">
-
-      <div id="authed-search-form">
-        <h3 class="text-center">Search Leads</h3>
+<div class="row">
+  <% if user_signed_in? %>
+  <div class="medium-3 columns">
+  <% else %>
+  <div class="medium-6 columns">
+  <% end %>
+    <div class="boxed" id="search-box">
+      <div id="search-form">
+        <h3 class="text-center" id="search-form-header">Search Leads</h3>
 
         <%= form_tag leads_path, method: :get do %>
         <%= label_tag :q1, "Company name" %>
@@ -25,10 +29,11 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="medium-6 columns">
-
-      <h3 class="text-center">Search Results</h3>
+  <div class="medium-6 columns">
+    <div class="boxed" id="results">
+      <h3 class="text-center" id="search-results-header">Search Results</h3>
 
       <div class="list">
         <ul id="hover-list">
@@ -38,19 +43,19 @@
         </ul>
       </div>
     </div>
+  </div>
 
-
+  <% if user_signed_in? %>
     <div class="medium-3 columns">
-      <% if user_signed_in? %>
-      <div id="create-leads-option">
+      <div class="boxed" id="create-leads-box">
+        <div id="create-leads-option">
+          <h3 class="text-center" id="create-leads-header">Create Leads</h3>
 
-        <h3 class="text-center">Create Leads</h3>
-
-        <div class="text-center">
-          <%= link_to "Create a Lead →", new_lead_path, class: :button %>
+          <div class="text-center">
+            <%= link_to "Create a Lead →", new_lead_path, class: :button %>
+          </div>
         </div>
       </div>
-      <% end %>
     </div>
-
-  </div><!-- row -->
+  <% end %>
+</div><!-- row -->
