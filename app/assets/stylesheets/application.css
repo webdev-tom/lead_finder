@@ -75,6 +75,10 @@
   color: #f2f3f4;
 }
 
+#create-leads-option {
+  padding-top: 15px;
+}
+
 .devise-back {
   padding-left: 230px; padding-left: 23rem;
 }
