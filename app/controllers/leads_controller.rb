@@ -41,18 +41,18 @@ class LeadsController < ApplicationController
   def claim
     @lead = Lead.find(params[:id])
     @user = current_user
-    lead = Lead.find(params[:id])
-    lead.update_attribute(:status, lead.status = 1)
-    lead.update_attribute(:user_id, lead.user_id = @user.id)
+    current_lead = Lead.find(params[:id])
+    current_lead.update_attribute(:status, current_lead.status = 1)
+    current_lead.update_attribute(:user_id, current_lead.user_id = @user.id)
     redirect_to lead_path(@lead)
     flash[:notice] = "Lead claimed successfully."
   end
 
   def unclaim
     @lead = Lead.find(params[:id])
-    lead = Lead.find(params[:id])
-    lead.update_attribute(:status, lead.status = 0)
-    lead.update_attribute(:user_id, lead.user_id = 0)
+    current_lead = Lead.find(params[:id])
+    current_lead.update_attribute(:status, current_lead.status = 0)
+    current_lead.update_attribute(:user_id, current_lead.user_id = 0)
     redirect_to lead_path(@lead)
     flash[:notice] = "Lead unclaimed successfully."
   end
@@ -86,10 +86,6 @@ class LeadsController < ApplicationController
                                 :minority_owned)
   end
 
-  def update_params
-    params.require(:lead).permit(:status)
-  end
-
   def valid_search?
     if params[:q1] == "" &&
         params[:q2] == "" &&
@@ -98,7 +94,6 @@ class LeadsController < ApplicationController
         params[:q5] == ""
 
       return false
-
     else
       return true
     end
