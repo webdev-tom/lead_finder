@@ -23,6 +23,7 @@ feature "create lead", %{
     fill_in 'Confirm Password', with: "password"
     click_button 'Sign Up'
 
+    click_on "Enter Site"
     click_on "Create a Lead →"
     fill_in "*Company Name", with: "Launch Academy"
     fill_in "*Address", with: "33 Harrison Ave."
@@ -47,6 +48,7 @@ feature "create lead", %{
     fill_in 'Confirm Password', with: "password"
     click_button 'Sign Up'
 
+    click_on "Enter Site"
     click_on "Create a Lead →"
     fill_in "*Company Name", with: "Launch Academy"
     fill_in "*Address", with: "33 Harrison Ave."

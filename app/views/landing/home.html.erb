@@ -1,6 +1,6 @@
 <div class=landing-bg>
   <p class="text-center" id="landing-text">
-    Their Information, All in One Place.
+    Business Information, All in One Place.
   </p>
   <%if user_signed_in?%>
     <p class="text-center">
@@ -8,7 +8,7 @@
     </p>
   <% else %>
     <p class="text-center">
-      <%= link_to 'Sign In', new_user_session_path, id: "landing-subtext1" %> ◆ <%= link_to 'Sign Up', new_user_registration_path, id: "landing-subtext2" %> ◆ <%= link_to 'Browse Leads', leads_path, id: "enter-site" %> ◆ <a href="https://github.com/tomfafard/lead_finder" id="landing-subtext3">Learn More</a>
+      <%= link_to 'Browse Leads', leads_path, id: "enter-site" %> ◆ <a href="https://github.com/tomfafard/lead_finder" id="landing-subtext3">Learn More</a>
     </p>
   <% end %>
 </div>

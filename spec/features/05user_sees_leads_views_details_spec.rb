@@ -17,6 +17,7 @@ feature "search leads", %{
   scenario "user can see a list and click on a lead to see more information" do
 
     visit root_path
+    click_on "Browse Leads"
     fill_in "Company name", with: "3M"
     fill_in "City", with: "Rockland"
     fill_in "State", with: "MA"

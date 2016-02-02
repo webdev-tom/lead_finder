@@ -25,6 +25,7 @@ feature "claim lead", %{
     fill_in 'Confirm Password', with: "password"
     click_button 'Sign Up'
 
+    click_on "Enter Site"
     fill_in "Company name", with: lead.company_name
     fill_in "City", with: lead.phys_city
     fill_in "State", with: lead.phys_state
@@ -49,6 +50,7 @@ feature "claim lead", %{
     fill_in 'Confirm Password', with: "password"
     click_button 'Sign Up'
 
+    click_on "Enter Site"
     fill_in "Company name", with: lead.company_name
     fill_in "City", with: lead.phys_city
     fill_in "State", with: lead.phys_state
@@ -74,6 +76,7 @@ feature "claim lead", %{
     fill_in 'Confirm Password', with: "password"
     click_button 'Sign Up'
 
+    click_on "Enter Site"
     fill_in "Company name", with: lead.company_name
     fill_in "City", with: lead.phys_city
     fill_in "State", with: lead.phys_state
@@ -92,6 +95,7 @@ feature "claim lead", %{
     fill_in 'Confirm Password', with: "password"
     click_button 'Sign Up'
 
+    click_on "Enter Site"
     fill_in "Company name", with: lead.company_name
     fill_in "City", with: lead.phys_city
     fill_in "State", with: lead.phys_state

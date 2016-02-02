@@ -17,6 +17,7 @@ feature "search leads", %{
   scenario "user enters required information and sees leads" do
 
     visit root_path
+    click_on "Browse Leads"
     fill_in "Company name", with: lead.company_name
     fill_in "City", with: lead.phys_city
     fill_in "State", with: lead.phys_state
@@ -28,6 +29,7 @@ feature "search leads", %{
   scenario "user does not enter required information and sees errors" do
     visit root_path
 
+    click_on "Browse Leads"
     click_button "Search"
 
     expect(page).to have_content("At least one field must be filled!")
