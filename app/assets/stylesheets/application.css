@@ -55,7 +55,8 @@
 }
 
 #map-canvas {
-  height: 100%;
+  width:1000px;
+  height:500px;
 }
 
 #title-style {
@@ -75,7 +76,22 @@
   color: #f2f3f4;
 }
 
+#claimed-leads-header {
+  font-family: 'Open Sans', sans-serif;
+  color: #f2f3f4;
+}
+
+#claimed-leads-show-header {
+  padding-top: 5px; padding-top: 0.5rem;
+  padding-left: 30px; padding-left: 3rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
 #create-leads-option {
+  padding-top: 15px;
+}
+
+#claimed-leads-option {
   padding-top: 15px;
 }
 
@@ -84,6 +100,7 @@
 }
 
 .company-header {
+  font-family: 'Open Sans', sans-serif;
   padding-top: 5px; padding-top: 0.5rem;
   padding-left: 30px; padding-left: 3rem;
 }

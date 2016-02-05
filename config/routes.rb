@@ -9,4 +9,6 @@ Rails.application.routes.draw do
       post 'unclaim'
     end
   end
+
+  get '/my_leads' => 'claims#show'
 end
