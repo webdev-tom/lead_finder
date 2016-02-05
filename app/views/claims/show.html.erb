@@ -1,0 +1,15 @@
+<h2 id="claimed-leads-show-header">Your Claimed Leads:</h2>
+
+<div class="row">
+  <div class="medium-12 columns">
+    <div class="boxed" id="claimed-leads-show-box">
+      <div id="claimed-leads-show-list">
+        <ul id="claimed-list">
+          <% @leads.each do |lead| %>
+          <li><a href="/leads/<%=lead.id%>"><%=lead.company_name%></a>  <%= link_to "Unclaim Lead", {:controller => "leads", action: "unclaim", id: lead.id}, method: :post, class: "button", style: "width:165px;height:50px;" %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
