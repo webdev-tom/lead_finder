@@ -53,7 +53,7 @@ class LeadsController < ApplicationController
     current_lead = Lead.find(params[:id])
     current_lead.update_attribute(:status, current_lead.status = 0)
     current_lead.update_attribute(:user_id, current_lead.user_id = 0)
-    redirect_to lead_path(@lead)
+    redirect_to :back
     flash[:notice] = "Lead unclaimed successfully."
   end
 
