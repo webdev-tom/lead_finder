@@ -21,7 +21,7 @@ feature "search leads", %{
     fill_in "Company name", with: lead.company_name
     fill_in "City", with: lead.phys_city
     fill_in "State", with: lead.phys_state
-    click_button "Search"
+    click_on "Search"
 
     expect(page).to have_content("3M")
   end
@@ -30,7 +30,7 @@ feature "search leads", %{
     visit root_path
 
     click_on "Browse Leads"
-    click_button "Search"
+    click_on "Search"
 
     expect(page).to have_content("At least one field must be filled!")
   end
