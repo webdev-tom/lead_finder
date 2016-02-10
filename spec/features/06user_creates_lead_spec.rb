@@ -54,7 +54,7 @@ feature "create lead", %{
     fill_in "*Address", with: "33 Harrison Ave."
     select "MA", from: "*State"
     fill_in "*Zip Code", with: "02111"
-    click_button "Create Lead"
+    click_on "Create Lead"
 
     expect(page).to have_content("Create a Lead")
     expect(page).to_not have_content("Search Leads")

@@ -21,7 +21,7 @@ feature "search leads", %{
     fill_in "Company name", with: "3M"
     fill_in "City", with: "Rockland"
     fill_in "State", with: "MA"
-    click_button "Search"
+    click_on "Search"
 
     click_link "3M"
 

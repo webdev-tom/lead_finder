@@ -80,7 +80,7 @@ feature "claim lead", %{
     fill_in "Company name", with: lead.company_name
     fill_in "City", with: lead.phys_city
     fill_in "State", with: lead.phys_state
-    click_button "Search"
+    click_on "Search"
 
     click_link "3M"
     click_on "Claim Lead"
@@ -99,7 +99,7 @@ feature "claim lead", %{
     fill_in "Company name", with: lead.company_name
     fill_in "City", with: lead.phys_city
     fill_in "State", with: lead.phys_state
-    click_button "Search"
+    click_on "Search"
 
     click_link "3M"
 
