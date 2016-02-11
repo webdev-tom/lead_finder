@@ -16,6 +16,11 @@
 
  */
 
+#map-canvas {
+ width:1000px;
+ height:500px;
+}
+
 #error-msg {
   padding-left: 30px; padding-left: 3rem;
 }
@@ -30,33 +35,10 @@
   border-top: 1px solid #8c8b8b;
 }
 
-#back-to-search {
-  padding-top: 10px; padding-top: 1rem;
-  padding-bottom: 10px; padding-bottom: 1rem;
-  padding-left: 20px; padding-left: 2rem;
-}
-
 #search-form {
   padding-top: 10px; padding-top: 1rem;
   padding-right: 20px; padding-right: 2rem;
   font-family: 'Open Sans', sans-serif;
-}
-
-#search-form-header {
-  font-family: 'Open Sans', sans-serif;
-}
-
-#search-leads-header {
-  padding-left: 15px; padding-left: 1.5rem;
-}
-
-#claim-header {
-  padding-left: 15px; padding-left: 1.5rem;
-}
-
-#map-canvas {
-  width:1000px;
-  height:500px;
 }
 
 #title-style {
@@ -67,26 +49,6 @@
   padding-top: 10px; padding-top: 1rem;
 }
 
-#search-results-header {
-  font-family: 'Open Sans', sans-serif;
-}
-
-#create-leads-header {
-  font-family: 'Open Sans', sans-serif;
-  color: #f2f3f4;
-}
-
-#claimed-leads-header {
-  font-family: 'Open Sans', sans-serif;
-  color: #f2f3f4;
-}
-
-#claimed-leads-show-header {
-  padding-top: 5px; padding-top: 0.5rem;
-  padding-left: 30px; padding-left: 3rem;
-  font-family: 'Open Sans', sans-serif;
-}
-
 #create-leads-option {
   padding-top: 15px;
 }
@@ -95,27 +57,12 @@
   padding-top: 15px;
 }
 
-.devise-back {
+#back-to-search {
+  padding-top: 10px; padding-top: 1rem;
+  padding-bottom: 10px; padding-bottom: 1rem;
+  padding-left: 20px; padding-left: 2rem;
+}
+
+#devise-back {
   padding-left: 230px; padding-left: 23rem;
-}
-
-.company-header {
-  font-family: 'Open Sans', sans-serif;
-  padding-top: 5px; padding-top: 0.5rem;
-  padding-left: 30px; padding-left: 3rem;
-}
-
-.sign-up-header {
-  padding-top: 5px; padding-top: 0.5rem;
-
-}
-
-.log-in-header {
-  padding-top: 5px; padding-top: 0.5rem;
-
-}
-
-.edit-header {
-  padding-top: 5px; padding-top: 0.5rem;
-
 }

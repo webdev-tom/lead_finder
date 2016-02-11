@@ -1,0 +1,49 @@
+#claimed-leads-header {
+  font-family: 'Open Sans', sans-serif;
+  color: #f2f3f4;
+}
+
+#claimed-leads-show-header {
+  padding-top: 5px; padding-top: 0.5rem;
+  padding-left: 30px; padding-left: 3rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#search-results-header {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#create-leads-header {
+  font-family: 'Open Sans', sans-serif;
+  color: #f2f3f4;
+}
+
+#sign-up-header {
+  padding-top: 5px; padding-top: 0.5rem;
+}
+
+#search-form-header {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#search-leads-header {
+  padding-left: 15px; padding-left: 1.5rem;
+}
+
+#claim-header {
+  padding-left: 15px; padding-left: 1.5rem;
+}
+
+#company-header {
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 5px; padding-top: 0.5rem;
+  padding-left: 30px; padding-left: 3rem;
+}
+
+#log-in-header {
+  padding-top: 5px; padding-top: 0.5rem;
+}
+
+#edit-header {
+  padding-top: 5px; padding-top: 0.5rem;
+}
