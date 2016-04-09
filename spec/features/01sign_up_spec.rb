@@ -16,7 +16,7 @@ feature "sign up", %{
     user = FactoryGirl.build(:user)
 
     visit root_path
-    click_link 'Sign Up'
+    first(:link, 'Sign Up').click
     fill_in 'First Name', with: user.first_name
     fill_in 'Last Name', with: user.last_name
     fill_in 'Email', with: user.email
@@ -33,7 +33,7 @@ feature "sign up", %{
   scenario "user does not specify required info" do
 
     visit root_path
-    click_link 'Sign Up'
+    first(:link, 'Sign Up').click
     click_button 'Sign Up'
 
     expect(page).to have_content("can't be blank")
@@ -43,7 +43,7 @@ feature "sign up", %{
     user1 = FactoryGirl.build(:user)
 
     visit root_path
-    click_link 'Sign Up'
+    first(:link, 'Sign Up').click
     fill_in 'First Name', with: user1.first_name
     fill_in 'Last Name', with: user1.last_name
     fill_in 'Email', with: user1.email

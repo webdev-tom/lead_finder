@@ -8,6 +8,7 @@
   width: 270px;
   height: 150px;
   background-color: #323232;
+  border: 3px solid #adadad;
 }
 
 #claimed-leads-box {
@@ -20,6 +21,7 @@
   width: 270px;
   height: 150px;
   background-color: #323232;
+  border: 3px solid #adadad;
 }
 
 #claimed-leads-show-box {
@@ -32,4 +34,5 @@
   width: 1000px;
   height: 500px;
   background-color: #323232;
+  border: 3px solid #adadad;
 }

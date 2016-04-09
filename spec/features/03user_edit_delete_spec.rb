@@ -23,7 +23,7 @@ feature 'user edits/deletes info', %{
   scenario 'user edits user info successfully' do
     visit root_path
 
-    click_link 'Sign Up'
+    first(:link, 'Sign Up').click
     fill_in 'First Name', with: "Test"
     fill_in 'Last Name', with: "User"
     fill_in 'Email', with: "testuser@gmail.com"
@@ -41,7 +41,7 @@ feature 'user edits/deletes info', %{
   scenario 'user deletes user info successfully' do
 
     visit root_path
-    click_link 'Sign Up'
+    first(:link, 'Sign Up').click
     fill_in 'First Name', with: "Test"
     fill_in 'Last Name', with: "User"
     fill_in 'Email', with: "testuser@gmail.com"

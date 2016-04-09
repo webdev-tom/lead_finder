@@ -17,7 +17,7 @@ feature "claim lead", %{
 
     visit root_path
 
-    click_link 'Sign Up'
+    first(:link, 'Sign Up').click
     fill_in 'First Name', with: "Test"
     fill_in 'Last Name', with: "User"
     fill_in 'Email', with: "testuser@gmail.com"
@@ -42,7 +42,7 @@ feature "claim lead", %{
 
     visit root_path
 
-    click_link 'Sign Up'
+    first(:link, 'Sign Up').click
     fill_in 'First Name', with: "Test"
     fill_in 'Last Name', with: "User"
     fill_in 'Email', with: "testuser@gmail.com"
@@ -68,7 +68,7 @@ feature "claim lead", %{
 
     visit root_path
 
-    click_link 'Sign Up'
+    first(:link, 'Sign Up').click
     fill_in 'First Name', with: "Test"
     fill_in 'Last Name', with: "User"
     fill_in 'Email', with: "testuser@gmail.com"
@@ -87,7 +87,7 @@ feature "claim lead", %{
 
     click_link 'Sign Out'
 
-    click_link 'Sign Up'
+    first(:link, 'Sign Up').click
     fill_in 'First Name', with: "Test1"
     fill_in 'Last Name', with: "User1"
     fill_in 'Email', with: "testuser1@gmail.com"

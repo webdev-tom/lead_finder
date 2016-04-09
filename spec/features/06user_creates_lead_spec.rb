@@ -15,7 +15,7 @@ feature "create lead", %{
 
     visit root_path
 
-    click_link 'Sign Up'
+    first(:link, 'Sign Up').click
     fill_in 'First Name', with: "Test"
     fill_in 'Last Name', with: "User"
     fill_in 'Email', with: "testuser@gmail.com"
@@ -40,7 +40,7 @@ feature "create lead", %{
 
     visit root_path
 
-    click_link 'Sign Up'
+    first(:link, 'Sign Up').click
     fill_in 'First Name', with: "Tester"
     fill_in 'Last Name', with: "User"
     fill_in 'Email', with: "testuser1@gmail.com"
@@ -57,6 +57,5 @@ feature "create lead", %{
     click_on "Create Lead"
 
     expect(page).to have_content("Create a Lead")
-    expect(page).to_not have_content("Search Leads")
   end
 end

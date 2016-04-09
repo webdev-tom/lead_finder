@@ -17,7 +17,7 @@ feature "view claimed lead", %{
 
     visit root_path
 
-    click_link 'Sign Up'
+    first(:link, 'Sign Up').click
     fill_in 'First Name', with: "Test"
     fill_in 'Last Name', with: "User"
     fill_in 'Email', with: "testuser@gmail.com"
@@ -45,7 +45,7 @@ feature "view claimed lead", %{
 
     visit root_path
 
-    click_link 'Sign Up'
+    first(:link, 'Sign Up').click
     fill_in 'First Name', with: "Test"
     fill_in 'Last Name', with: "User"
     fill_in 'Email', with: "testuser@gmail.com"
