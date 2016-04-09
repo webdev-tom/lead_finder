@@ -1,0 +1,25 @@
+#sitemap_bg {
+  margin-top: 100px;
+  background-color: #141414;
+  border-top: 4px solid #adadad;
+  height: 200px;
+}
+
+#sitemap-list {
+  padding-top: 35px;
+  color: #f2f2f2;
+  list-style: none;
+  font-size: 12px;
+}
+
+#sitemap-list a {
+  color: #4c4c4c;
+}
+
+#sitemap-list a:hover {
+  color: #7f7f7f;
+}
+
+#copyright {
+  padding-left: 20px;
+}

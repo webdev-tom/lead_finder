@@ -50,4 +50,16 @@
     <%= yield %>
 
   </body>
+  <footer>
+    <div class="text-center" id="sitemap_bg">
+      <ul id="sitemap-list">
+        <li><%= link_to "Landing", root_path %></li>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <li><%= link_to "Search Leads", leads_path %></li>
+      </ul>
+
+      <p id="copyright">copyright LOLOL</p>
+    </div>
+  </footer>
 </html>
