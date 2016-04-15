@@ -1,0 +1,9 @@
+.border {
+  margin-top: 75px;
+  border-left: 1px solid #000;
+  height: 500px;
+}
+
+#new-lead-line-break {
+  border-top: 1px solid #8c8b8b;
+}
