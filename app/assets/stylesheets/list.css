@@ -1,5 +1,6 @@
 #hover-list {
   list-style-type: none;
+  list-style-position: inside;
   margin: 0;
   padding: 0;
 }
@@ -40,6 +41,7 @@
 
 #claimed-list {
   list-style-type: none;
+  list-style-position: inside;
   font-family: "Arial Black", Gadget, sans-serif;
   font-size: 25px;
 }

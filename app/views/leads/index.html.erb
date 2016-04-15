@@ -32,37 +32,41 @@
   </div>
 
   <div class="medium-6 columns">
-    <div class="boxed" id="results">
-      <h3 class="text-center" id="search-results-header">Search Results</h3>
 
-      <div class="list">
-        <ul id="hover-list">
-          <%@leads.each do |lead|%>
-            <li id="hover-list-item"><a href="/leads/<%= lead.id %>"><%= lead.company_name %></a></li>
-          <%end%>
-        </ul>
+    <div class="border">
+      <div class="boxed" id="results-box">
+        <h3 class="text-center" id="search-results-header">Search Results</h3>
+        <div class="list">
+          <ul id="hover-list">
+            <%@leads.each do |lead|%>
+              <li id="hover-list-item"><a href="/leads/<%= lead.id %>"><%= lead.company_name %></a></li>
+            <%end%>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <% if user_signed_in? %>
     <div class="medium-3 columns">
-      <div class="boxed" id="create-leads-box">
-        <div id="create-leads-option">
-          <h3 class="text-center" id="create-leads-header">Create Leads</h3>
+      <div class="border">
+        <div class="boxed" id="create-leads-box">
+          <div id="create-leads-option">
+            <h3 class="text-center" id="create-leads-header">Create Leads</h3>
 
-          <div class="text-center">
-            <%= link_to "Create a Lead →", new_lead_path, class: :button, style: "width:230px;" %>
+            <div class="text-center">
+              <%= link_to "Create a Lead →", new_lead_path, class: :button, style: "width:230px;" %>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="boxed" id="claimed-leads-box">
-        <div id="claimed-leads-option">
-          <h3 class="text-center" id="claimed-leads-header">Claimed Leads</h3>
+        <div class="boxed" id="claimed-leads-box">
+          <div id="claimed-leads-option">
+            <h3 class="text-center" id="claimed-leads-header">Claimed Leads</h3>
 
-          <div class="text-center">
-            <%= link_to "View Claimed Leads →", "/my_leads", class: :button, style: "width:230px;" %>
+            <div class="text-center" id="view-claimed-header">
+              <%= link_to "View Claimed Leads →", "/my_leads", class: :button, style: "width:230px;" %>
+            </div>
           </div>
         </div>
       </div>

@@ -11,6 +11,9 @@
 
 #search-results-header {
   font-family: 'Open Sans', sans-serif;
+  top: 15px;
+  padding-left: 100px;
+  position: absolute;
 }
 
 #create-leads-header {
@@ -46,4 +49,8 @@
 
 #edit-header {
   padding-top: 5px; padding-top: 0.5rem;
+}
+
+#title-style {
+  font-family: 'Fugaz One', cursive;
 }

@@ -10,5 +10,5 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/my_leads' => 'claims#show'
+  get '/my_leads' => 'claims#index'
 end
