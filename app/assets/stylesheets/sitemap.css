@@ -3,6 +3,8 @@
   background-color: #141414;
   border-top: 4px solid #adadad;
   height: 200px;
+  margin-left: -204px;
+  margin-right: -204px;
 }
 
 #sitemap-list {
