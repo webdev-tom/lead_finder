@@ -21,10 +21,6 @@
   color: #f2f3f4;
 }
 
-#sign-up-header {
-  padding-top: 5px; padding-top: 0.5rem;
-}
-
 #search-form-header {
   font-family: 'Open Sans', sans-serif;
 }
@@ -43,11 +39,27 @@
   padding-left: 30px; padding-left: 3rem;
 }
 
+#sign-up-header {
+  font-family: 'Fugaz One', cursive;
+}
+
+#sign-up {
+  padding-top: 5px; padding-top: 0.5rem;
+}
+
 #log-in-header {
+  font-family: 'Fugaz One', cursive;
+}
+
+#log-in {
   padding-top: 5px; padding-top: 0.5rem;
 }
 
 #edit-header {
+  font-family: 'Fugaz One', cursive;
+}
+
+#edit {
   padding-top: 5px; padding-top: 0.5rem;
 }
 
