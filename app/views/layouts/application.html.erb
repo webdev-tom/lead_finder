@@ -20,6 +20,7 @@
         <li class="name">
           <h1 id="title-style"><a id="home-compass" href="/"><strong>LeadFinder</strong></a></h1>
         </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
       </ul>
 
       <section class="top-bar-section">
@@ -27,11 +28,11 @@
       <ul class="right">
         <li class="has-dropdown">
           <% if user_signed_in? %>
-            <li class="background-nav" id="sign-out-btn"><strong><%= link_to 'Sign Out', destroy_user_session_path, class: :button, method: :delete %></strong></li>
-            <li class="background-nav" id="edit-info-btn"><strong><%= link_to 'Edit Info', edit_user_registration_path, class: :button %></strong></li>
+            <li class="text-center" id="sign-out-btn"><strong><%= link_to 'Sign Out', destroy_user_session_path, class: :button, method: :delete %></strong></li>
+            <li class="text-center" id="edit-info-btn"><strong><%= link_to 'Edit Info', edit_user_registration_path, class: :button %></strong></li>
           <% else %>
-            <li class="background-nav" id="sign-in-btn"><strong><%= link_to 'Sign In', new_user_session_path, class: :button %></strong></li>
-            <li class="background-nav" id="sign-up-btn"><strong><%= link_to 'Sign Up', new_user_registration_path, class: :button %></strong></li>
+            <li class="text-center" id="sign-in-btn"><strong><%= link_to 'Sign In', new_user_session_path, class: :button %></strong></li>
+            <li class="text-center" id="sign-up-btn"><strong><%= link_to 'Sign Up', new_user_registration_path, class: :button %></strong></li>
           <% end %>
         </li>
       </ul>
